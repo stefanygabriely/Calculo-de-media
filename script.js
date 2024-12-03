@@ -12,8 +12,9 @@ document.getElementById('formulario').addEventListener("submit", function (event
     let resultadoDiv= document.getElementById('resultado');
     if(media>=6.){
         resultadoDiv.innerHTML= `<p class="aprovado">Aprovado!Sua média
-        foi:${media.toFixed(2)}</p>
-    }
-
-
-    });
+        foi:${media.toFixed(2)}</p>`;
+     }else{
+        resultadoDiv.innerHTML= `<p class="recuperacao">.sua média foi:
+        ${média.nota(2)}</p>`; 
+     }
+});
